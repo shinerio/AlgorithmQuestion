@@ -16,17 +16,6 @@ public class MaxPathSum {
 
     int max = Integer.MIN_VALUE;
 
-    public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode(1);
-        treeNode.left = new TreeNode(-2);
-        treeNode.left.left = new TreeNode(1);
-        treeNode.left.left = new TreeNode(-1);
-        treeNode.left.right = new TreeNode(3);
-        treeNode.right = new TreeNode(-3);
-        treeNode.right.left = new TreeNode(-2);
-        new MaxPathSum().maxPathSum(treeNode);
-    }
-
     public int maxPathSum(TreeNode root) {
         helper(root);
         return max;
