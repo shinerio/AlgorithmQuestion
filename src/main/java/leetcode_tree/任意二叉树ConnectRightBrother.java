@@ -8,15 +8,6 @@ package leetcode_tree;
 
 public class 任意二叉树ConnectRightBrother {
 
-    public static void main(String[] args) {
-        TreeLinkNode node = new TreeLinkNode(1);
-        node.left = new TreeLinkNode(2);
-        node.right = new TreeLinkNode(3);
-        node.left.left = new TreeLinkNode(4);
-        node.left.right = new TreeLinkNode(5);
-        new 任意二叉树ConnectRightBrother().connect(node);
-    }
-
     /**
      * 层序遍历很直观，但是不是常数空间
      * 和满二叉树的区别在于需要考虑节点缺失的情况，关键是如何找到第一个节点
