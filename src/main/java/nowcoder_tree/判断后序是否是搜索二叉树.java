@@ -1,4 +1,11 @@
-public class 判断中序便利是否是搜索二叉树 {
+package nowcoder_tree;
+
+public class 判断后序是否是搜索二叉树 {
+    /**
+     * 后序遍历最后一个节点是根节点，然后需要保证所有比他小的树在前面，比他大的树在后面
+     * @param sequence
+     * @return
+     */
     public boolean VerifySquenceOfBST(int [] sequence) {
         if (sequence == null || sequence.length == 0) {
             return false;
@@ -19,9 +26,5 @@ public class 判断中序便利是否是搜索二叉树 {
             if (sequence[i] < rootVal)
                 return false;
         return verifySequenceOfBST(sequence, start, leftRoot-1) && verifySequenceOfBST(sequence, leftRoot, end-1);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new 判断中序便利是否是搜索二叉树().VerifySquenceOfBST(new int[]{3, 2, 1}));
     }
 }
